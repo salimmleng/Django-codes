@@ -12,3 +12,6 @@ def courses(request):
 
 def about(request):
     return HttpResponse("This is first app/about page")
+
+def deep(request):
+    return HttpResponse("hello world")

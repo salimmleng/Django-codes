@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First app</title>
+    
+</head>
+<body>
+    <h1> <a href="/second_app/home3/">Home</a></h1>
+    <h1> <a href="/second_app/practise/">Practise</a></h1>
+
+    <h1> This is second app practise page</h1>
+
+    <h3>My name is: {{Author}}</h3>
+    <h3>My age is: {{age}}</h3>
+
+    {% for i in courses%}
+    <h3>{{i.id}} {{i.course_name}} {{i.fee}}</h3>
+    {% endfor %}
+
+
+   
+
+</body>
+</html>

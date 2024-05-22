@@ -4,5 +4,6 @@ urlpatterns = [
     path('courses/', views.courses),
     path('about/',views.about),
     path("",views.home),
+    path('deep/',views.deep)
     
 ]

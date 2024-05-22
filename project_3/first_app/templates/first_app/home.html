@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First app</title>
+    
+</head>
+<body>
+    <h1>This is html home page</h1>
+
+    <h2>Author: {{Author}} is in backend</h2>
+    <h2>Age: {{age}}</h2>
+
+
+    {% comment %} conditional statement  {% endcomment %}
+
+    {% if age >= 20 %}
+    <h4>You will get driving licence</h4>
+    {% elif age >= 10  and age <= 19 %}
+    <h4>You will not get driving licence</h4>
+    {% else %}
+    <h4>You are a child</h4>
+    {% endif %}
+
+    {% comment %} for loop {% endcomment %}
+
+    {% for i in courses%}
+    <h3>{{i.id}} {{i.name}} {{i.fee}} </h3>
+
+    {% endfor %}
+
+    {% comment %} join filter {% endcomment %}
+
+    <h3>Only list: {{lst}}</h3>
+    <h1>List using join: {{ lst | join:" " }}</h1>
+
+
+
+    {% comment %} date time {% endcomment %}
+
+    <h1>{{ birthday | date:"D d M Y" }}</h1>
+
+    {% comment %} cut filter space cut {% endcomment %}
+
+    <h1>{{ val | cut:" " }}.</h1>
+
+    {% comment %} Length Filter {% endcomment %}
+
+    <h1>{{ val | length }}</h1>
+
+
+    {% comment %} Truncatechars Filter v.v.I {% endcomment %}
+
+    <h3>{{'Happy coding' | truncatechars:6}}</h3>
+
+    {% comment %} Timesince Filter v.v.I {% endcomment %}
+
+
+    {% comment %} <h2>{{2022-01-02T10:30:00.000123 | timesince}}</h2> {% endcomment %}
+
+    {% comment %} Truncatewords Filter {% endcomment %}
+
+    <h3>{{"Better days ahead this is salim" | truncatewords:2}}</h3>
+
+
+
+
+   
+
+</body>
+</html>
