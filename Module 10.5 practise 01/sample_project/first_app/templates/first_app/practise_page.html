@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample project</title>
+    
+</head>
+
+<body>
+
+    <h2><a href="/first_app/">Home</a></h2>
+    <h2><a href="/first_app/contact/">Contact</a></h2>
+
+    <h1>Welcome to practise page</h1>
+
+    
+
+    <!--  length  -->
+
+    <h4>Length: {{ val | length }}</h4>
+
+    <!-- add value  -->
+
+    <h3>{{ add | add:"6" }}</h3>
+
+    <!-- addslashes -->
+
+    <h3>{{ slash | addslashes }}</h3>
+
+    <!-- capfirst -->
+
+    <h3>{{ cap | capfirst }}</h3>
+
+    <!-- center -->
+
+    <h3>"{{ cen | center:"15" }}"</h3>
+
+    <!-- cut -->
+
+    <h3>{{ cut | cut:" " }}</h3>
+
+    <!-- date -->
+
+    <h3>{{ birthday | date:"D d M Y" }}</h3>
+
+    <!-- default -->
+
+    <h3>{{ def | default:"nothing" }}</h3>
+
+    <!-- dictsort -->
+
+    <h3>{{ sort | dictsort:"name" }}</h3>
+
+    <!-- divisibleby -->
+
+    <h3>{{ div | divisibleby:"3" }}</h3>
+
+    <!-- escape -->
+
+    <h3>{{ title | escape }}</h3>
+
+    <!-- filesizeformat -->
+
+    <h3>{{ value | filesizeformat }}</h3>
+
+    <!-- first -->
+
+    <h3>{{ f_item | first }}</h3>
+
+    <!-- last -->
+
+    <h3>{{ las | last }}</h3>
+
+    <!-- join -->
+
+    <h3>{{ join | join:" // " }}</h3>
+
+    <!-- linenumbers -->
+
+    <h3>{{ line_num | linenumbers }}</h3>
+
+    <!-- lower -->
+
+    <h3>{{ low | lower }}</h3>
+
+    <!-- upper -->
+
+    <h3>{{ up | upper }}</h3>
+
+    <!-- make_list -->
+
+    <h3>{{ makeList | make_list }}</h3>
+
+    <!-- random -->
+    <!-- refresh dile random value dibe -->
+
+    <h3>{{ ran | random }}</h3>
+
+    <!-- slice -->
+
+    <h3>{{ some_list | slice:":3" }}</h3>
+
+    <!-- slugify -->
+
+    <h3>{{ slug | slugify }}</h3>
+
+    <!-- time -->
+
+    <h3>{{ tme | time:"H:i" }}</h3>
+
+   <!-- title -->
+
+   <h3>{{ t | title }}</h3>
+
+   <!-- word count -->
+
+   <h3>{{ cnt | wordcount }}</h3>
+
+   <!-- Truncatechars Filter -->
+
+   <h3>{{ trun | truncatechars:6 }}</h3>
+
+   <!-- Truncatewords Filter -->
+
+   <h3>{{ word | truncatewords:4 }}</h3>
+
+   <!-- Striptags Filter -->
+
+   <h3>{{ strip | striptags }}.</h3>
+
+   <!--  timesince-->
+
+   <h1>{{ mybirthdate|timesince:mydate }}</h1>
+
+
+
+</body>
+
+</html>
+
+
+
+
