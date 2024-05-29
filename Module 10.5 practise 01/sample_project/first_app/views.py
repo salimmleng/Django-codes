@@ -5,26 +5,6 @@ import datetime
 
 # Create your views here.
 
-def home(request):
-    data = "this is salim"
-    number_list = [1,2,3,4,5,6,7]
-    context ={
-        'data': data,
-        'list': number_list,
-    }
-    return render(request,'first_app/index.html',context)
-
-def contact(request):
-    context={
-        'name': 'Salim',
-        'address': 'Mohammadpur ,Dhaka',
-        'age': 27,
-        'nationality': 'Bangladeshi',
-        'course': 'Django',
-        'phone': '01571234790',
-
-    }
-    return render(request,'first_app/contact.html',context)
 
 
 def practise_page(request):
