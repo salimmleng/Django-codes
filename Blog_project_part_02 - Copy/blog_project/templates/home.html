@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class='d-flex flex-wrap align-items-center p-3 px-5'>
+  <div class="col-6">
+    <h1>Welcome to Django blog</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officiis accusamus aut in cupiditate facilis laborum veritatis quidem fugiat esse id delectus adipisci deserunt animi iste, exercitationem, dignissimos deleniti accusantium quaerat, placeat officia! Illum reprehenderit laudantium quidem deserunt explicabo nostrum dicta, sit dolores sunt aliquid vel. Illo alias dicta architecto quisquam ipsa deleniti sunt vel molestiae, aut magnam nemo ea sapiente saepe tenetur unde illum cupiditate, dolore aperiam, possimus corrupti? Id error autem, temporibus perferendis, in distinctio eius dolorem commodi optio, laborum possimus quibusdam. Illum, esse eveniet voluptatum eum suscipit eaque consequuntur deleniti cumque! Impedit enim perferendis voluptatem debitis est?
+    </p>
+
+  </div>
+  <div class="col-6 ">
+    <img style="width : 650px" src="{% static 'head.jpg' %}" alt="">
+
+  </div>
+</div>
+
+
+<div class="d-flex flex-wrap p-4">
+  
+  <div class='col-2 bg-white p-3'>
+    <h5>All categories</h5>
+    {% for cat in category %}
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="{{cat.id}}">
+      <label class="form-check-label" for="{{cat.id}}">
+       
+        <a href="{% url 'category_wise_post' cat.slug  %}" class="text-decoration-none text-dark">{{cat.name}}</a>
+      </label>
+    </div>
+    {% endfor %}
+  </div>
+  
+  <div class="col-10">
+    <h3 class='text-center'>{{data | length}} results found</h3>
+  <div class="d-flex flex-wrap pt-3">
+    {% for post in data %}
+    <div class="col-sm-3">
+      <div class="card mx-2">
+        <div class="card-body">
+          <h5 class="card-title">{{post.title}}</h5>
+          <p class="card-text">
+            {{post.content}}
+          </p>
+          <p><small>Author: {{post.author}}</small></p>
+          <p> Category:
+            {% for cat in post.category.all %}
+            <button class="btn btn-primary btn-sm mt-2" disabled>{{cat.name}}</button>
+            {% endfor %}
+  
+          </p>
+         
+          
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+</div>
+
+
+
+
+{% endblock %}
